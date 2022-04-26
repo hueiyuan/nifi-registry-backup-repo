@@ -1,0 +1,6 @@
+flows:
+  6b596537-ec76-4e1f-825a-554446115f03: {ver: 1, file: emr_module_in_staging.snapshot,
+    comments: SI-XXX emr module in staging, author: anonymous, created: 1650957718521,
+    flowName: emr module in staging, flowDesc: emr module in staging}
+layoutVer: 1
+bucketId: 618f4d50-af63-4e1f-bc1c-6f9398a47c39
