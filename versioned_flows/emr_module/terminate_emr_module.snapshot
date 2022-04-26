@@ -1,0 +1,1292 @@
+{
+  "header" : {
+    "dataModelVersion" : "3"
+  },
+  "content" : {
+    "flowSnapshot" : {
+      "externalControllerServices" : { },
+      "flowContents" : {
+        "comments" : "",
+        "componentType" : "PROCESS_GROUP",
+        "connections" : [ {
+          "backPressureDataSizeThreshold" : "1 GB",
+          "backPressureObjectThreshold" : 10000,
+          "bends" : [ ],
+          "componentType" : "CONNECTION",
+          "destination" : {
+            "groupId" : "c63c4c19-191b-39fc-98bd-e32dd3a95ec5",
+            "id" : "b9aa6a8d-92ea-3930-8d33-36c73676c1f6",
+            "name" : "TerminateEMRSuccess",
+            "type" : "OUTPUT_PORT"
+          },
+          "flowFileExpiration" : "0 sec",
+          "groupIdentifier" : "c63c4c19-191b-39fc-98bd-e32dd3a95ec5",
+          "identifier" : "847365be-6650-35c6-8596-7fc8b25a1049",
+          "labelIndex" : 1,
+          "loadBalanceCompression" : "DO_NOT_COMPRESS",
+          "loadBalanceStrategy" : "DO_NOT_LOAD_BALANCE",
+          "name" : "",
+          "partitioningAttribute" : "",
+          "prioritizers" : [ ],
+          "selectedRelationships" : [ "" ],
+          "source" : {
+            "comments" : "",
+            "groupId" : "d15e4d98-6b7f-3d4e-adaa-b6882fffbf13",
+            "id" : "710cc4d9-4da1-36dc-b2e3-b81d8a183f58",
+            "name" : "EMRTerminated",
+            "type" : "OUTPUT_PORT"
+          },
+          "zIndex" : 0
+        }, {
+          "backPressureDataSizeThreshold" : "1 GB",
+          "backPressureObjectThreshold" : 10000,
+          "bends" : [ ],
+          "componentType" : "CONNECTION",
+          "destination" : {
+            "groupId" : "c63c4c19-191b-39fc-98bd-e32dd3a95ec5",
+            "id" : "32c8bec0-2281-3784-9aa7-376dea803133",
+            "name" : "TerminateEMRFailed",
+            "type" : "OUTPUT_PORT"
+          },
+          "flowFileExpiration" : "0 sec",
+          "groupIdentifier" : "c63c4c19-191b-39fc-98bd-e32dd3a95ec5",
+          "identifier" : "e999dae6-0079-347d-b30a-828a41342c71",
+          "labelIndex" : 1,
+          "loadBalanceCompression" : "DO_NOT_COMPRESS",
+          "loadBalanceStrategy" : "DO_NOT_LOAD_BALANCE",
+          "name" : "",
+          "partitioningAttribute" : "",
+          "prioritizers" : [ ],
+          "selectedRelationships" : [ "" ],
+          "source" : {
+            "comments" : "",
+            "groupId" : "d15e4d98-6b7f-3d4e-adaa-b6882fffbf13",
+            "id" : "6d576403-7526-3013-ab3a-a889c5ccee2f",
+            "name" : "ClusterErrors",
+            "type" : "OUTPUT_PORT"
+          },
+          "zIndex" : 0
+        }, {
+          "backPressureDataSizeThreshold" : "1 GB",
+          "backPressureObjectThreshold" : 10000,
+          "bends" : [ ],
+          "componentType" : "CONNECTION",
+          "destination" : {
+            "comments" : "",
+            "groupId" : "9a1d7496-8fe6-3528-aa2b-ddff9d7d688e",
+            "id" : "9aa9be94-7b31-3c77-bd50-a88d7dbb51ee",
+            "name" : "TerminateEMRInput",
+            "type" : "INPUT_PORT"
+          },
+          "flowFileExpiration" : "0 sec",
+          "groupIdentifier" : "c63c4c19-191b-39fc-98bd-e32dd3a95ec5",
+          "identifier" : "a3306d4c-eba1-3bb9-99f6-ef72c872b139",
+          "labelIndex" : 1,
+          "loadBalanceCompression" : "DO_NOT_COMPRESS",
+          "loadBalanceStrategy" : "DO_NOT_LOAD_BALANCE",
+          "name" : "",
+          "partitioningAttribute" : "",
+          "prioritizers" : [ ],
+          "selectedRelationships" : [ "" ],
+          "source" : {
+            "groupId" : "c63c4c19-191b-39fc-98bd-e32dd3a95ec5",
+            "id" : "9e6b3fe0-8426-31dc-8f07-f3f45e8ee87c",
+            "name" : "TerminateEMRInput",
+            "type" : "INPUT_PORT"
+          },
+          "zIndex" : 0
+        }, {
+          "backPressureDataSizeThreshold" : "1 GB",
+          "backPressureObjectThreshold" : 10000,
+          "bends" : [ ],
+          "componentType" : "CONNECTION",
+          "destination" : {
+            "groupId" : "d15e4d98-6b7f-3d4e-adaa-b6882fffbf13",
+            "id" : "aae5ee69-9b96-3caf-bce0-fa68e922a876",
+            "name" : "MonitorEMRInput",
+            "type" : "INPUT_PORT"
+          },
+          "flowFileExpiration" : "0 sec",
+          "groupIdentifier" : "c63c4c19-191b-39fc-98bd-e32dd3a95ec5",
+          "identifier" : "08665559-fc6d-3820-8300-61d214c00856",
+          "labelIndex" : 1,
+          "loadBalanceCompression" : "DO_NOT_COMPRESS",
+          "loadBalanceStrategy" : "DO_NOT_LOAD_BALANCE",
+          "name" : "",
+          "partitioningAttribute" : "",
+          "prioritizers" : [ ],
+          "selectedRelationships" : [ "" ],
+          "source" : {
+            "groupId" : "9a1d7496-8fe6-3528-aa2b-ddff9d7d688e",
+            "id" : "8edfc4b3-1577-3427-bfbe-b12ddfe26f80",
+            "name" : "EMRStatusOutput",
+            "type" : "OUTPUT_PORT"
+          },
+          "zIndex" : 0
+        } ],
+        "controllerServices" : [ ],
+        "defaultBackPressureDataSizeThreshold" : "1 GB",
+        "defaultBackPressureObjectThreshold" : 10000,
+        "defaultFlowFileExpiration" : "0 sec",
+        "flowFileConcurrency" : "UNBOUNDED",
+        "flowFileOutboundPolicy" : "STREAM_WHEN_AVAILABLE",
+        "funnels" : [ ],
+        "identifier" : "c63c4c19-191b-39fc-98bd-e32dd3a95ec5",
+        "inputPorts" : [ {
+          "allowRemoteAccess" : false,
+          "componentType" : "INPUT_PORT",
+          "concurrentlySchedulableTaskCount" : 1,
+          "groupIdentifier" : "c63c4c19-191b-39fc-98bd-e32dd3a95ec5",
+          "identifier" : "9e6b3fe0-8426-31dc-8f07-f3f45e8ee87c",
+          "name" : "TerminateEMRInput",
+          "position" : {
+            "x" : 1616.0,
+            "y" : -160.0
+          },
+          "scheduledState" : "ENABLED",
+          "type" : "INPUT_PORT"
+        } ],
+        "labels" : [ ],
+        "name" : "Terminate EMR Module",
+        "outputPorts" : [ {
+          "allowRemoteAccess" : false,
+          "componentType" : "OUTPUT_PORT",
+          "concurrentlySchedulableTaskCount" : 1,
+          "groupIdentifier" : "c63c4c19-191b-39fc-98bd-e32dd3a95ec5",
+          "identifier" : "b9aa6a8d-92ea-3930-8d33-36c73676c1f6",
+          "name" : "TerminateEMRSuccess",
+          "position" : {
+            "x" : 1616.0,
+            "y" : 520.0
+          },
+          "scheduledState" : "ENABLED",
+          "type" : "OUTPUT_PORT"
+        }, {
+          "allowRemoteAccess" : false,
+          "componentType" : "OUTPUT_PORT",
+          "concurrentlySchedulableTaskCount" : 1,
+          "groupIdentifier" : "c63c4c19-191b-39fc-98bd-e32dd3a95ec5",
+          "identifier" : "32c8bec0-2281-3784-9aa7-376dea803133",
+          "name" : "TerminateEMRFailed",
+          "position" : {
+            "x" : 2104.0,
+            "y" : 512.0
+          },
+          "scheduledState" : "ENABLED",
+          "type" : "OUTPUT_PORT"
+        } ],
+        "position" : {
+          "x" : 1360.0,
+          "y" : 264.0
+        },
+        "processGroups" : [ {
+          "comments" : "",
+          "componentType" : "PROCESS_GROUP",
+          "connections" : [ {
+            "backPressureDataSizeThreshold" : "1 GB",
+            "backPressureObjectThreshold" : 10000,
+            "bends" : [ ],
+            "componentType" : "CONNECTION",
+            "destination" : {
+              "comments" : "",
+              "groupId" : "d15e4d98-6b7f-3d4e-adaa-b6882fffbf13",
+              "id" : "710cc4d9-4da1-36dc-b2e3-b81d8a183f58",
+              "name" : "EMRTerminated",
+              "type" : "OUTPUT_PORT"
+            },
+            "flowFileExpiration" : "0 sec",
+            "groupIdentifier" : "d15e4d98-6b7f-3d4e-adaa-b6882fffbf13",
+            "identifier" : "03bad940-def1-3096-a1ae-bbaa1eca2091",
+            "labelIndex" : 1,
+            "loadBalanceCompression" : "DO_NOT_COMPRESS",
+            "loadBalanceStrategy" : "DO_NOT_LOAD_BALANCE",
+            "name" : "",
+            "partitioningAttribute" : "",
+            "prioritizers" : [ ],
+            "selectedRelationships" : [ "Terminated" ],
+            "source" : {
+              "comments" : "",
+              "groupId" : "d15e4d98-6b7f-3d4e-adaa-b6882fffbf13",
+              "id" : "c0e8dc41-c124-319c-9238-c7229605a66f",
+              "name" : "RouteByClusterStatus",
+              "type" : "PROCESSOR"
+            },
+            "zIndex" : 0
+          }, {
+            "backPressureDataSizeThreshold" : "1 GB",
+            "backPressureObjectThreshold" : 10000,
+            "bends" : [ {
+              "x" : 943.695556640625,
+              "y" : 952.29736328125
+            }, {
+              "x" : 943.695556640625,
+              "y" : 1002.29736328125
+            } ],
+            "componentType" : "CONNECTION",
+            "destination" : {
+              "comments" : "",
+              "groupId" : "d15e4d98-6b7f-3d4e-adaa-b6882fffbf13",
+              "id" : "52144aa3-7bda-3c97-bbc8-575ba59f8f6b",
+              "name" : "ExpiredCheck",
+              "type" : "PROCESSOR"
+            },
+            "flowFileExpiration" : "0 sec",
+            "groupIdentifier" : "d15e4d98-6b7f-3d4e-adaa-b6882fffbf13",
+            "identifier" : "5d15201f-d7a0-3807-8e7a-2801e435f642",
+            "labelIndex" : 1,
+            "loadBalanceCompression" : "DO_NOT_COMPRESS",
+            "loadBalanceStrategy" : "DO_NOT_LOAD_BALANCE",
+            "name" : "",
+            "partitioningAttribute" : "",
+            "prioritizers" : [ ],
+            "selectedRelationships" : [ "unmatched" ],
+            "source" : {
+              "comments" : "",
+              "groupId" : "d15e4d98-6b7f-3d4e-adaa-b6882fffbf13",
+              "id" : "52144aa3-7bda-3c97-bbc8-575ba59f8f6b",
+              "name" : "ExpiredCheck",
+              "type" : "PROCESSOR"
+            },
+            "zIndex" : 0
+          }, {
+            "backPressureDataSizeThreshold" : "1 GB",
+            "backPressureObjectThreshold" : 10000,
+            "bends" : [ ],
+            "componentType" : "CONNECTION",
+            "destination" : {
+              "comments" : "",
+              "groupId" : "d15e4d98-6b7f-3d4e-adaa-b6882fffbf13",
+              "id" : "1c0abba0-91df-3267-aefd-b4312dc5ccea",
+              "name" : "CheckEMRStatus",
+              "type" : "PROCESSOR"
+            },
+            "flowFileExpiration" : "0 sec",
+            "groupIdentifier" : "d15e4d98-6b7f-3d4e-adaa-b6882fffbf13",
+            "identifier" : "40cfd96e-49e0-32fe-a13b-2dba4207bdb9",
+            "labelIndex" : 1,
+            "loadBalanceCompression" : "DO_NOT_COMPRESS",
+            "loadBalanceStrategy" : "DO_NOT_LOAD_BALANCE",
+            "name" : "",
+            "partitioningAttribute" : "",
+            "prioritizers" : [ ],
+            "selectedRelationships" : [ "" ],
+            "source" : {
+              "groupId" : "d15e4d98-6b7f-3d4e-adaa-b6882fffbf13",
+              "id" : "aae5ee69-9b96-3caf-bce0-fa68e922a876",
+              "name" : "MonitorEMRInput",
+              "type" : "INPUT_PORT"
+            },
+            "zIndex" : 0
+          }, {
+            "backPressureDataSizeThreshold" : "1 GB",
+            "backPressureObjectThreshold" : 10000,
+            "bends" : [ {
+              "x" : 704.0,
+              "y" : 248.0
+            } ],
+            "componentType" : "CONNECTION",
+            "destination" : {
+              "comments" : "",
+              "groupId" : "d15e4d98-6b7f-3d4e-adaa-b6882fffbf13",
+              "id" : "c0e8dc41-c124-319c-9238-c7229605a66f",
+              "name" : "RouteByClusterStatus",
+              "type" : "PROCESSOR"
+            },
+            "flowFileExpiration" : "0 sec",
+            "groupIdentifier" : "d15e4d98-6b7f-3d4e-adaa-b6882fffbf13",
+            "identifier" : "b14dc3bb-998c-3d89-b726-8876fa5b6691",
+            "labelIndex" : 1,
+            "loadBalanceCompression" : "DO_NOT_COMPRESS",
+            "loadBalanceStrategy" : "DO_NOT_LOAD_BALANCE",
+            "name" : "",
+            "partitioningAttribute" : "",
+            "prioritizers" : [ ],
+            "selectedRelationships" : [ "matched" ],
+            "source" : {
+              "comments" : "",
+              "groupId" : "d15e4d98-6b7f-3d4e-adaa-b6882fffbf13",
+              "id" : "388c123c-d53c-3b0a-bb32-ee5220bb54f8",
+              "name" : "GetClusterStatus",
+              "type" : "PROCESSOR"
+            },
+            "zIndex" : 0
+          }, {
+            "backPressureDataSizeThreshold" : "1 GB",
+            "backPressureObjectThreshold" : 10000,
+            "bends" : [ ],
+            "componentType" : "CONNECTION",
+            "destination" : {
+              "comments" : "",
+              "groupId" : "d15e4d98-6b7f-3d4e-adaa-b6882fffbf13",
+              "id" : "6d576403-7526-3013-ab3a-a889c5ccee2f",
+              "name" : "ClusterErrors",
+              "type" : "OUTPUT_PORT"
+            },
+            "flowFileExpiration" : "0 sec",
+            "groupIdentifier" : "d15e4d98-6b7f-3d4e-adaa-b6882fffbf13",
+            "identifier" : "d6cc2600-dc43-3667-8f97-739f94063199",
+            "labelIndex" : 1,
+            "loadBalanceCompression" : "DO_NOT_COMPRESS",
+            "loadBalanceStrategy" : "DO_NOT_LOAD_BALANCE",
+            "name" : "",
+            "partitioningAttribute" : "",
+            "prioritizers" : [ ],
+            "selectedRelationships" : [ "success" ],
+            "source" : {
+              "comments" : "",
+              "groupId" : "d15e4d98-6b7f-3d4e-adaa-b6882fffbf13",
+              "id" : "8372062c-c85f-35fc-894b-4414cea3d2d4",
+              "name" : "UpdateErrorMsg",
+              "type" : "PROCESSOR"
+            },
+            "zIndex" : 0
+          }, {
+            "backPressureDataSizeThreshold" : "1 GB",
+            "backPressureObjectThreshold" : 10000,
+            "bends" : [ {
+              "x" : 744.0,
+              "y" : 584.0
+            } ],
+            "componentType" : "CONNECTION",
+            "destination" : {
+              "comments" : "",
+              "groupId" : "d15e4d98-6b7f-3d4e-adaa-b6882fffbf13",
+              "id" : "6a4fcb76-e350-32da-a597-c4e4b41ce2f7",
+              "name" : "SetDelayTimeBy2Mins",
+              "type" : "PROCESSOR"
+            },
+            "flowFileExpiration" : "0 sec",
+            "groupIdentifier" : "d15e4d98-6b7f-3d4e-adaa-b6882fffbf13",
+            "identifier" : "b2d554d6-06b6-3b80-9b8a-1bd0720bac3b",
+            "labelIndex" : 1,
+            "loadBalanceCompression" : "DO_NOT_COMPRESS",
+            "loadBalanceStrategy" : "DO_NOT_LOAD_BALANCE",
+            "name" : "",
+            "partitioningAttribute" : "",
+            "prioritizers" : [ ],
+            "selectedRelationships" : [ "Terminating", "Bootstrapping", "Starting", "Running" ],
+            "source" : {
+              "comments" : "",
+              "groupId" : "d15e4d98-6b7f-3d4e-adaa-b6882fffbf13",
+              "id" : "c0e8dc41-c124-319c-9238-c7229605a66f",
+              "name" : "RouteByClusterStatus",
+              "type" : "PROCESSOR"
+            },
+            "zIndex" : 0
+          }, {
+            "backPressureDataSizeThreshold" : "1 GB",
+            "backPressureObjectThreshold" : 10000,
+            "bends" : [ {
+              "x" : 1408.0,
+              "y" : 72.0
+            } ],
+            "componentType" : "CONNECTION",
+            "destination" : {
+              "comments" : "",
+              "groupId" : "d15e4d98-6b7f-3d4e-adaa-b6882fffbf13",
+              "id" : "388c123c-d53c-3b0a-bb32-ee5220bb54f8",
+              "name" : "GetClusterStatus",
+              "type" : "PROCESSOR"
+            },
+            "flowFileExpiration" : "0 sec",
+            "groupIdentifier" : "d15e4d98-6b7f-3d4e-adaa-b6882fffbf13",
+            "identifier" : "04d76eaf-6bc2-3d3b-b95e-2e4b610d40d1",
+            "labelIndex" : 1,
+            "loadBalanceCompression" : "DO_NOT_COMPRESS",
+            "loadBalanceStrategy" : "DO_NOT_LOAD_BALANCE",
+            "name" : "",
+            "partitioningAttribute" : "",
+            "prioritizers" : [ ],
+            "selectedRelationships" : [ "output stream" ],
+            "source" : {
+              "comments" : "",
+              "groupId" : "d15e4d98-6b7f-3d4e-adaa-b6882fffbf13",
+              "id" : "1c0abba0-91df-3267-aefd-b4312dc5ccea",
+              "name" : "CheckEMRStatus",
+              "type" : "PROCESSOR"
+            },
+            "zIndex" : 0
+          }, {
+            "backPressureDataSizeThreshold" : "1 GB",
+            "backPressureObjectThreshold" : 10000,
+            "bends" : [ {
+              "x" : 352.0,
+              "y" : 976.0
+            }, {
+              "x" : 360.0,
+              "y" : 72.0
+            } ],
+            "componentType" : "CONNECTION",
+            "destination" : {
+              "comments" : "",
+              "groupId" : "d15e4d98-6b7f-3d4e-adaa-b6882fffbf13",
+              "id" : "1c0abba0-91df-3267-aefd-b4312dc5ccea",
+              "name" : "CheckEMRStatus",
+              "type" : "PROCESSOR"
+            },
+            "flowFileExpiration" : "0 sec",
+            "groupIdentifier" : "d15e4d98-6b7f-3d4e-adaa-b6882fffbf13",
+            "identifier" : "31bbc0dc-0b33-3fa2-a732-e2d7aaf2cd41",
+            "labelIndex" : 1,
+            "loadBalanceCompression" : "DO_NOT_COMPRESS",
+            "loadBalanceStrategy" : "DO_NOT_LOAD_BALANCE",
+            "name" : "",
+            "partitioningAttribute" : "",
+            "prioritizers" : [ ],
+            "selectedRelationships" : [ "expired" ],
+            "source" : {
+              "comments" : "",
+              "groupId" : "d15e4d98-6b7f-3d4e-adaa-b6882fffbf13",
+              "id" : "52144aa3-7bda-3c97-bbc8-575ba59f8f6b",
+              "name" : "ExpiredCheck",
+              "type" : "PROCESSOR"
+            },
+            "zIndex" : 0
+          }, {
+            "backPressureDataSizeThreshold" : "1 GB",
+            "backPressureObjectThreshold" : 10000,
+            "bends" : [ ],
+            "componentType" : "CONNECTION",
+            "destination" : {
+              "comments" : "",
+              "groupId" : "d15e4d98-6b7f-3d4e-adaa-b6882fffbf13",
+              "id" : "8372062c-c85f-35fc-894b-4414cea3d2d4",
+              "name" : "UpdateErrorMsg",
+              "type" : "PROCESSOR"
+            },
+            "flowFileExpiration" : "0 sec",
+            "groupIdentifier" : "d15e4d98-6b7f-3d4e-adaa-b6882fffbf13",
+            "identifier" : "3c6f8bc0-ee23-3d5f-9511-0f05f226eaeb",
+            "labelIndex" : 1,
+            "loadBalanceCompression" : "DO_NOT_COMPRESS",
+            "loadBalanceStrategy" : "DO_NOT_LOAD_BALANCE",
+            "name" : "",
+            "partitioningAttribute" : "",
+            "prioritizers" : [ ],
+            "selectedRelationships" : [ "unmatched", "Terminated_with_errors" ],
+            "source" : {
+              "comments" : "",
+              "groupId" : "d15e4d98-6b7f-3d4e-adaa-b6882fffbf13",
+              "id" : "c0e8dc41-c124-319c-9238-c7229605a66f",
+              "name" : "RouteByClusterStatus",
+              "type" : "PROCESSOR"
+            },
+            "zIndex" : 0
+          }, {
+            "backPressureDataSizeThreshold" : "1 GB",
+            "backPressureObjectThreshold" : 10000,
+            "bends" : [ ],
+            "componentType" : "CONNECTION",
+            "destination" : {
+              "comments" : "",
+              "groupId" : "d15e4d98-6b7f-3d4e-adaa-b6882fffbf13",
+              "id" : "52144aa3-7bda-3c97-bbc8-575ba59f8f6b",
+              "name" : "ExpiredCheck",
+              "type" : "PROCESSOR"
+            },
+            "flowFileExpiration" : "0 sec",
+            "groupIdentifier" : "d15e4d98-6b7f-3d4e-adaa-b6882fffbf13",
+            "identifier" : "e47a0c5e-f032-370e-b071-14edf78df048",
+            "labelIndex" : 1,
+            "loadBalanceCompression" : "DO_NOT_COMPRESS",
+            "loadBalanceStrategy" : "DO_NOT_LOAD_BALANCE",
+            "name" : "",
+            "partitioningAttribute" : "",
+            "prioritizers" : [ ],
+            "selectedRelationships" : [ "success" ],
+            "source" : {
+              "comments" : "",
+              "groupId" : "d15e4d98-6b7f-3d4e-adaa-b6882fffbf13",
+              "id" : "6a4fcb76-e350-32da-a597-c4e4b41ce2f7",
+              "name" : "SetDelayTimeBy2Mins",
+              "type" : "PROCESSOR"
+            },
+            "zIndex" : 0
+          } ],
+          "controllerServices" : [ ],
+          "defaultBackPressureDataSizeThreshold" : "1 GB",
+          "defaultBackPressureObjectThreshold" : 10000,
+          "defaultFlowFileExpiration" : "0 sec",
+          "flowFileConcurrency" : "UNBOUNDED",
+          "flowFileOutboundPolicy" : "STREAM_WHEN_AVAILABLE",
+          "funnels" : [ ],
+          "groupIdentifier" : "c63c4c19-191b-39fc-98bd-e32dd3a95ec5",
+          "identifier" : "d15e4d98-6b7f-3d4e-adaa-b6882fffbf13",
+          "inputPorts" : [ {
+            "allowRemoteAccess" : false,
+            "componentType" : "INPUT_PORT",
+            "concurrentlySchedulableTaskCount" : 1,
+            "groupIdentifier" : "d15e4d98-6b7f-3d4e-adaa-b6882fffbf13",
+            "identifier" : "aae5ee69-9b96-3caf-bce0-fa68e922a876",
+            "name" : "MonitorEMRInput",
+            "position" : {
+              "x" : 936.0,
+              "y" : -120.0
+            },
+            "scheduledState" : "ENABLED",
+            "type" : "INPUT_PORT"
+          } ],
+          "labels" : [ ],
+          "name" : "Monitor EMR Terminated Cluster",
+          "outputPorts" : [ {
+            "allowRemoteAccess" : false,
+            "comments" : "",
+            "componentType" : "OUTPUT_PORT",
+            "concurrentlySchedulableTaskCount" : 1,
+            "groupIdentifier" : "d15e4d98-6b7f-3d4e-adaa-b6882fffbf13",
+            "identifier" : "6d576403-7526-3013-ab3a-a889c5ccee2f",
+            "name" : "ClusterErrors",
+            "position" : {
+              "x" : 1408.0,
+              "y" : 760.0
+            },
+            "scheduledState" : "ENABLED",
+            "type" : "OUTPUT_PORT"
+          }, {
+            "allowRemoteAccess" : false,
+            "comments" : "",
+            "componentType" : "OUTPUT_PORT",
+            "concurrentlySchedulableTaskCount" : 1,
+            "groupIdentifier" : "d15e4d98-6b7f-3d4e-adaa-b6882fffbf13",
+            "identifier" : "710cc4d9-4da1-36dc-b2e3-b81d8a183f58",
+            "name" : "EMRTerminated",
+            "position" : {
+              "x" : 960.0,
+              "y" : 648.0
+            },
+            "scheduledState" : "ENABLED",
+            "type" : "OUTPUT_PORT"
+          } ],
+          "position" : {
+            "x" : 1544.0,
+            "y" : 264.0
+          },
+          "processGroups" : [ ],
+          "processors" : [ {
+            "autoTerminatedRelationships" : [ ],
+            "bulletinLevel" : "WARN",
+            "bundle" : {
+              "artifact" : "nifi-standard-nar",
+              "group" : "org.apache.nifi",
+              "version" : "1.16.0"
+            },
+            "comments" : "",
+            "componentType" : "PROCESSOR",
+            "concurrentlySchedulableTaskCount" : 1,
+            "executionNode" : "ALL",
+            "groupIdentifier" : "d15e4d98-6b7f-3d4e-adaa-b6882fffbf13",
+            "identifier" : "c0e8dc41-c124-319c-9238-c7229605a66f",
+            "name" : "RouteByClusterStatus",
+            "penaltyDuration" : "30 sec",
+            "position" : {
+              "x" : 872.0,
+              "y" : 336.0
+            },
+            "properties" : {
+              "Bootstrapping" : "${cluster_status:equals('BOOTSTRAPPING')}",
+              "Terminating" : "${cluster_status:equals('TERMINATING')}",
+              "Routing Strategy" : "Route to Property name",
+              "Starting" : "${cluster_status:equals('STARTING')}",
+              "Running" : "${cluster_status:equals('RUNNING')}",
+              "Terminated" : "${cluster_status:equals('TERMINATED')}",
+              "Terminated_with_errors" : "${cluster_status:equals('TERMINATED_WITH_ERRORS')}"
+            },
+            "propertyDescriptors" : {
+              "Bootstrapping" : {
+                "displayName" : "Bootstrapping",
+                "identifiesControllerService" : false,
+                "name" : "Bootstrapping",
+                "sensitive" : false
+              },
+              "Terminating" : {
+                "displayName" : "Terminating",
+                "identifiesControllerService" : false,
+                "name" : "Terminating",
+                "sensitive" : false
+              },
+              "Routing Strategy" : {
+                "displayName" : "Routing Strategy",
+                "identifiesControllerService" : false,
+                "name" : "Routing Strategy",
+                "sensitive" : false
+              },
+              "Starting" : {
+                "displayName" : "Starting",
+                "identifiesControllerService" : false,
+                "name" : "Starting",
+                "sensitive" : false
+              },
+              "Running" : {
+                "displayName" : "Running",
+                "identifiesControllerService" : false,
+                "name" : "Running",
+                "sensitive" : false
+              },
+              "Terminated" : {
+                "displayName" : "Terminated",
+                "identifiesControllerService" : false,
+                "name" : "Terminated",
+                "sensitive" : false
+              },
+              "Terminated_with_errors" : {
+                "displayName" : "Terminated_with_errors",
+                "identifiesControllerService" : false,
+                "name" : "Terminated_with_errors",
+                "sensitive" : false
+              }
+            },
+            "runDurationMillis" : 0,
+            "scheduledState" : "ENABLED",
+            "schedulingPeriod" : "0 sec",
+            "schedulingStrategy" : "TIMER_DRIVEN",
+            "style" : { },
+            "type" : "org.apache.nifi.processors.standard.RouteOnAttribute",
+            "yieldDuration" : "1 sec"
+          }, {
+            "autoTerminatedRelationships" : [ ],
+            "bulletinLevel" : "WARN",
+            "bundle" : {
+              "artifact" : "nifi-update-attribute-nar",
+              "group" : "org.apache.nifi",
+              "version" : "1.16.0"
+            },
+            "comments" : "",
+            "componentType" : "PROCESSOR",
+            "concurrentlySchedulableTaskCount" : 1,
+            "executionNode" : "ALL",
+            "groupIdentifier" : "d15e4d98-6b7f-3d4e-adaa-b6882fffbf13",
+            "identifier" : "8372062c-c85f-35fc-894b-4414cea3d2d4",
+            "name" : "UpdateErrorMsg",
+            "penaltyDuration" : "30 sec",
+            "position" : {
+              "x" : 1352.0,
+              "y" : 536.0
+            },
+            "properties" : {
+              "error_msg" : "The EMR ID: ${emr_jobflow_id} and status is ${cluster_status} !",
+              "Store State" : "Do not store state",
+              "canonical-value-lookup-cache-size" : "100"
+            },
+            "propertyDescriptors" : {
+              "Delete Attributes Expression" : {
+                "displayName" : "Delete Attributes Expression",
+                "identifiesControllerService" : false,
+                "name" : "Delete Attributes Expression",
+                "sensitive" : false
+              },
+              "error_msg" : {
+                "displayName" : "error_msg",
+                "identifiesControllerService" : false,
+                "name" : "error_msg",
+                "sensitive" : false
+              },
+              "Store State" : {
+                "displayName" : "Store State",
+                "identifiesControllerService" : false,
+                "name" : "Store State",
+                "sensitive" : false
+              },
+              "canonical-value-lookup-cache-size" : {
+                "displayName" : "Cache Value Lookup Cache Size",
+                "identifiesControllerService" : false,
+                "name" : "canonical-value-lookup-cache-size",
+                "sensitive" : false
+              },
+              "Stateful Variables Initial Value" : {
+                "displayName" : "Stateful Variables Initial Value",
+                "identifiesControllerService" : false,
+                "name" : "Stateful Variables Initial Value",
+                "sensitive" : false
+              }
+            },
+            "runDurationMillis" : 0,
+            "scheduledState" : "ENABLED",
+            "schedulingPeriod" : "0 sec",
+            "schedulingStrategy" : "TIMER_DRIVEN",
+            "style" : { },
+            "type" : "org.apache.nifi.processors.attributes.UpdateAttribute",
+            "yieldDuration" : "1 sec"
+          }, {
+            "autoTerminatedRelationships" : [ "original", "nonzero status" ],
+            "bulletinLevel" : "WARN",
+            "bundle" : {
+              "artifact" : "nifi-standard-nar",
+              "group" : "org.apache.nifi",
+              "version" : "1.16.0"
+            },
+            "comments" : "",
+            "componentType" : "PROCESSOR",
+            "concurrentlySchedulableTaskCount" : 1,
+            "executionNode" : "ALL",
+            "groupIdentifier" : "d15e4d98-6b7f-3d4e-adaa-b6882fffbf13",
+            "identifier" : "1c0abba0-91df-3267-aefd-b4312dc5ccea",
+            "name" : "CheckEMRStatus",
+            "penaltyDuration" : "30 sec",
+            "position" : {
+              "x" : 880.0,
+              "y" : 8.0
+            },
+            "properties" : {
+              "argumentsStrategy" : "Command Arguments Property",
+              "Max Attribute Length" : "256",
+              "Command Path" : "aws",
+              "Argument Delimiter" : " ",
+              "Ignore STDIN" : "false",
+              "Command Arguments" : "emr describe-cluster --cluster-id ${emr_jobflow_id}"
+            },
+            "propertyDescriptors" : {
+              "argumentsStrategy" : {
+                "displayName" : "Command Arguments Strategy",
+                "identifiesControllerService" : false,
+                "name" : "argumentsStrategy",
+                "sensitive" : false
+              },
+              "Max Attribute Length" : {
+                "displayName" : "Max Attribute Length",
+                "identifiesControllerService" : false,
+                "name" : "Max Attribute Length",
+                "sensitive" : false
+              },
+              "Command Path" : {
+                "displayName" : "Command Path",
+                "identifiesControllerService" : false,
+                "name" : "Command Path",
+                "sensitive" : false
+              },
+              "Working Directory" : {
+                "displayName" : "Working Directory",
+                "identifiesControllerService" : false,
+                "name" : "Working Directory",
+                "sensitive" : false
+              },
+              "Output Destination Attribute" : {
+                "displayName" : "Output Destination Attribute",
+                "identifiesControllerService" : false,
+                "name" : "Output Destination Attribute",
+                "sensitive" : false
+              },
+              "Argument Delimiter" : {
+                "displayName" : "Argument Delimiter",
+                "identifiesControllerService" : false,
+                "name" : "Argument Delimiter",
+                "sensitive" : false
+              },
+              "Ignore STDIN" : {
+                "displayName" : "Ignore STDIN",
+                "identifiesControllerService" : false,
+                "name" : "Ignore STDIN",
+                "sensitive" : false
+              },
+              "Command Arguments" : {
+                "displayName" : "Command Arguments",
+                "identifiesControllerService" : false,
+                "name" : "Command Arguments",
+                "sensitive" : false
+              }
+            },
+            "runDurationMillis" : 0,
+            "scheduledState" : "ENABLED",
+            "schedulingPeriod" : "0 sec",
+            "schedulingStrategy" : "TIMER_DRIVEN",
+            "style" : { },
+            "type" : "org.apache.nifi.processors.standard.ExecuteStreamCommand",
+            "yieldDuration" : "1 sec"
+          }, {
+            "autoTerminatedRelationships" : [ "failure", "unmatched" ],
+            "bulletinLevel" : "WARN",
+            "bundle" : {
+              "artifact" : "nifi-standard-nar",
+              "group" : "org.apache.nifi",
+              "version" : "1.16.0"
+            },
+            "comments" : "",
+            "componentType" : "PROCESSOR",
+            "concurrentlySchedulableTaskCount" : 1,
+            "executionNode" : "ALL",
+            "groupIdentifier" : "d15e4d98-6b7f-3d4e-adaa-b6882fffbf13",
+            "identifier" : "388c123c-d53c-3b0a-bb32-ee5220bb54f8",
+            "name" : "GetClusterStatus",
+            "penaltyDuration" : "30 sec",
+            "position" : {
+              "x" : 872.0,
+              "y" : 176.0
+            },
+            "properties" : {
+              "Destination" : "flowfile-attribute",
+              "cluster_status" : "$.Cluster.Status.State",
+              "Return Type" : "auto-detect",
+              "Null Value Representation" : "empty string",
+              "Path Not Found Behavior" : "ignore"
+            },
+            "propertyDescriptors" : {
+              "Destination" : {
+                "displayName" : "Destination",
+                "identifiesControllerService" : false,
+                "name" : "Destination",
+                "sensitive" : false
+              },
+              "cluster_status" : {
+                "displayName" : "cluster_status",
+                "identifiesControllerService" : false,
+                "name" : "cluster_status",
+                "sensitive" : false
+              },
+              "Return Type" : {
+                "displayName" : "Return Type",
+                "identifiesControllerService" : false,
+                "name" : "Return Type",
+                "sensitive" : false
+              },
+              "Null Value Representation" : {
+                "displayName" : "Null Value Representation",
+                "identifiesControllerService" : false,
+                "name" : "Null Value Representation",
+                "sensitive" : false
+              },
+              "Path Not Found Behavior" : {
+                "displayName" : "Path Not Found Behavior",
+                "identifiesControllerService" : false,
+                "name" : "Path Not Found Behavior",
+                "sensitive" : false
+              }
+            },
+            "runDurationMillis" : 0,
+            "scheduledState" : "ENABLED",
+            "schedulingPeriod" : "0 sec",
+            "schedulingStrategy" : "TIMER_DRIVEN",
+            "style" : { },
+            "type" : "org.apache.nifi.processors.standard.EvaluateJsonPath",
+            "yieldDuration" : "1 sec"
+          }, {
+            "autoTerminatedRelationships" : [ ],
+            "bulletinLevel" : "WARN",
+            "bundle" : {
+              "artifact" : "nifi-update-attribute-nar",
+              "group" : "org.apache.nifi",
+              "version" : "1.16.0"
+            },
+            "comments" : "",
+            "componentType" : "PROCESSOR",
+            "concurrentlySchedulableTaskCount" : 1,
+            "executionNode" : "ALL",
+            "groupIdentifier" : "d15e4d98-6b7f-3d4e-adaa-b6882fffbf13",
+            "identifier" : "6a4fcb76-e350-32da-a597-c4e4b41ce2f7",
+            "name" : "SetDelayTimeBy2Mins",
+            "penaltyDuration" : "30 sec",
+            "position" : {
+              "x" : 480.0,
+              "y" : 728.0
+            },
+            "properties" : {
+              "Store State" : "Do not store state",
+              "canonical-value-lookup-cache-size" : "100",
+              "expired_time" : "${now():plus(120000)}"
+            },
+            "propertyDescriptors" : {
+              "Delete Attributes Expression" : {
+                "displayName" : "Delete Attributes Expression",
+                "identifiesControllerService" : false,
+                "name" : "Delete Attributes Expression",
+                "sensitive" : false
+              },
+              "Store State" : {
+                "displayName" : "Store State",
+                "identifiesControllerService" : false,
+                "name" : "Store State",
+                "sensitive" : false
+              },
+              "canonical-value-lookup-cache-size" : {
+                "displayName" : "Cache Value Lookup Cache Size",
+                "identifiesControllerService" : false,
+                "name" : "canonical-value-lookup-cache-size",
+                "sensitive" : false
+              },
+              "expired_time" : {
+                "displayName" : "expired_time",
+                "identifiesControllerService" : false,
+                "name" : "expired_time",
+                "sensitive" : false
+              },
+              "Stateful Variables Initial Value" : {
+                "displayName" : "Stateful Variables Initial Value",
+                "identifiesControllerService" : false,
+                "name" : "Stateful Variables Initial Value",
+                "sensitive" : false
+              }
+            },
+            "runDurationMillis" : 0,
+            "scheduledState" : "ENABLED",
+            "schedulingPeriod" : "0 sec",
+            "schedulingStrategy" : "TIMER_DRIVEN",
+            "style" : { },
+            "type" : "org.apache.nifi.processors.attributes.UpdateAttribute",
+            "yieldDuration" : "1 sec"
+          }, {
+            "autoTerminatedRelationships" : [ ],
+            "bulletinLevel" : "WARN",
+            "bundle" : {
+              "artifact" : "nifi-standard-nar",
+              "group" : "org.apache.nifi",
+              "version" : "1.16.0"
+            },
+            "comments" : "",
+            "componentType" : "PROCESSOR",
+            "concurrentlySchedulableTaskCount" : 1,
+            "executionNode" : "ALL",
+            "groupIdentifier" : "d15e4d98-6b7f-3d4e-adaa-b6882fffbf13",
+            "identifier" : "52144aa3-7bda-3c97-bbc8-575ba59f8f6b",
+            "name" : "ExpiredCheck",
+            "penaltyDuration" : "30 sec",
+            "position" : {
+              "x" : 480.0,
+              "y" : 912.0
+            },
+            "properties" : {
+              "Routing Strategy" : "Route to Property name",
+              "expired" : "${now():gt(${'expired_time'})}"
+            },
+            "propertyDescriptors" : {
+              "Routing Strategy" : {
+                "displayName" : "Routing Strategy",
+                "identifiesControllerService" : false,
+                "name" : "Routing Strategy",
+                "sensitive" : false
+              },
+              "expired" : {
+                "displayName" : "expired",
+                "identifiesControllerService" : false,
+                "name" : "expired",
+                "sensitive" : false
+              }
+            },
+            "runDurationMillis" : 0,
+            "scheduledState" : "ENABLED",
+            "schedulingPeriod" : "60 sec",
+            "schedulingStrategy" : "TIMER_DRIVEN",
+            "style" : { },
+            "type" : "org.apache.nifi.processors.standard.RouteOnAttribute",
+            "yieldDuration" : "1 sec"
+          } ],
+          "remoteProcessGroups" : [ ],
+          "variables" : { }
+        }, {
+          "comments" : "",
+          "componentType" : "PROCESS_GROUP",
+          "connections" : [ {
+            "backPressureDataSizeThreshold" : "1 GB",
+            "backPressureObjectThreshold" : 10000,
+            "bends" : [ ],
+            "componentType" : "CONNECTION",
+            "destination" : {
+              "comments" : "",
+              "groupId" : "9a1d7496-8fe6-3528-aa2b-ddff9d7d688e",
+              "id" : "b9d3cf7f-e1fa-38a3-b6ea-d89510105f13",
+              "name" : "TerminateEMRCluster",
+              "type" : "PROCESSOR"
+            },
+            "flowFileExpiration" : "0 sec",
+            "groupIdentifier" : "9a1d7496-8fe6-3528-aa2b-ddff9d7d688e",
+            "identifier" : "11badb27-ee4e-3f44-b784-cd2913fdac41",
+            "labelIndex" : 1,
+            "loadBalanceCompression" : "DO_NOT_COMPRESS",
+            "loadBalanceStrategy" : "DO_NOT_LOAD_BALANCE",
+            "name" : "",
+            "partitioningAttribute" : "",
+            "prioritizers" : [ ],
+            "selectedRelationships" : [ "" ],
+            "source" : {
+              "comments" : "",
+              "groupId" : "9a1d7496-8fe6-3528-aa2b-ddff9d7d688e",
+              "id" : "9aa9be94-7b31-3c77-bd50-a88d7dbb51ee",
+              "name" : "TerminateEMRInput",
+              "type" : "INPUT_PORT"
+            },
+            "zIndex" : 0
+          }, {
+            "backPressureDataSizeThreshold" : "1 GB",
+            "backPressureObjectThreshold" : 10000,
+            "bends" : [ ],
+            "componentType" : "CONNECTION",
+            "destination" : {
+              "groupId" : "9a1d7496-8fe6-3528-aa2b-ddff9d7d688e",
+              "id" : "8edfc4b3-1577-3427-bfbe-b12ddfe26f80",
+              "name" : "EMRStatusOutput",
+              "type" : "OUTPUT_PORT"
+            },
+            "flowFileExpiration" : "0 sec",
+            "groupIdentifier" : "9a1d7496-8fe6-3528-aa2b-ddff9d7d688e",
+            "identifier" : "d7e65b65-06a7-34a9-80b1-4087e8983890",
+            "labelIndex" : 1,
+            "loadBalanceCompression" : "DO_NOT_COMPRESS",
+            "loadBalanceStrategy" : "DO_NOT_LOAD_BALANCE",
+            "name" : "",
+            "partitioningAttribute" : "",
+            "prioritizers" : [ ],
+            "selectedRelationships" : [ "output stream" ],
+            "source" : {
+              "comments" : "",
+              "groupId" : "9a1d7496-8fe6-3528-aa2b-ddff9d7d688e",
+              "id" : "50512c8b-58f5-38a0-b23e-2395b0dbb98c",
+              "name" : "CheckEMRStatus",
+              "type" : "PROCESSOR"
+            },
+            "zIndex" : 0
+          }, {
+            "backPressureDataSizeThreshold" : "1 GB",
+            "backPressureObjectThreshold" : 10000,
+            "bends" : [ ],
+            "componentType" : "CONNECTION",
+            "destination" : {
+              "comments" : "",
+              "groupId" : "9a1d7496-8fe6-3528-aa2b-ddff9d7d688e",
+              "id" : "50512c8b-58f5-38a0-b23e-2395b0dbb98c",
+              "name" : "CheckEMRStatus",
+              "type" : "PROCESSOR"
+            },
+            "flowFileExpiration" : "0 sec",
+            "groupIdentifier" : "9a1d7496-8fe6-3528-aa2b-ddff9d7d688e",
+            "identifier" : "b893664b-5e64-3716-9fcc-c7cb4ee9ac4c",
+            "labelIndex" : 1,
+            "loadBalanceCompression" : "DO_NOT_COMPRESS",
+            "loadBalanceStrategy" : "DO_NOT_LOAD_BALANCE",
+            "name" : "",
+            "partitioningAttribute" : "",
+            "prioritizers" : [ ],
+            "selectedRelationships" : [ "output stream" ],
+            "source" : {
+              "comments" : "",
+              "groupId" : "9a1d7496-8fe6-3528-aa2b-ddff9d7d688e",
+              "id" : "b9d3cf7f-e1fa-38a3-b6ea-d89510105f13",
+              "name" : "TerminateEMRCluster",
+              "type" : "PROCESSOR"
+            },
+            "zIndex" : 0
+          } ],
+          "controllerServices" : [ ],
+          "defaultBackPressureDataSizeThreshold" : "1 GB",
+          "defaultBackPressureObjectThreshold" : 10000,
+          "defaultFlowFileExpiration" : "0 sec",
+          "flowFileConcurrency" : "UNBOUNDED",
+          "flowFileOutboundPolicy" : "STREAM_WHEN_AVAILABLE",
+          "funnels" : [ ],
+          "groupIdentifier" : "c63c4c19-191b-39fc-98bd-e32dd3a95ec5",
+          "identifier" : "9a1d7496-8fe6-3528-aa2b-ddff9d7d688e",
+          "inputPorts" : [ {
+            "allowRemoteAccess" : false,
+            "comments" : "",
+            "componentType" : "INPUT_PORT",
+            "concurrentlySchedulableTaskCount" : 1,
+            "groupIdentifier" : "9a1d7496-8fe6-3528-aa2b-ddff9d7d688e",
+            "identifier" : "9aa9be94-7b31-3c77-bd50-a88d7dbb51ee",
+            "name" : "TerminateEMRInput",
+            "position" : {
+              "x" : 680.0,
+              "y" : 240.0
+            },
+            "scheduledState" : "ENABLED",
+            "type" : "INPUT_PORT"
+          } ],
+          "labels" : [ ],
+          "name" : "Terminate EMR Cluster",
+          "outputPorts" : [ {
+            "allowRemoteAccess" : false,
+            "componentType" : "OUTPUT_PORT",
+            "concurrentlySchedulableTaskCount" : 1,
+            "groupIdentifier" : "9a1d7496-8fe6-3528-aa2b-ddff9d7d688e",
+            "identifier" : "8edfc4b3-1577-3427-bfbe-b12ddfe26f80",
+            "name" : "EMRStatusOutput",
+            "position" : {
+              "x" : 680.0,
+              "y" : 728.0
+            },
+            "scheduledState" : "ENABLED",
+            "type" : "OUTPUT_PORT"
+          } ],
+          "position" : {
+            "x" : 1544.0,
+            "y" : -16.0
+          },
+          "processGroups" : [ ],
+          "processors" : [ {
+            "autoTerminatedRelationships" : [ "original", "nonzero status" ],
+            "bulletinLevel" : "WARN",
+            "bundle" : {
+              "artifact" : "nifi-standard-nar",
+              "group" : "org.apache.nifi",
+              "version" : "1.16.0"
+            },
+            "comments" : "",
+            "componentType" : "PROCESSOR",
+            "concurrentlySchedulableTaskCount" : 1,
+            "executionNode" : "ALL",
+            "groupIdentifier" : "9a1d7496-8fe6-3528-aa2b-ddff9d7d688e",
+            "identifier" : "b9d3cf7f-e1fa-38a3-b6ea-d89510105f13",
+            "name" : "TerminateEMRCluster",
+            "penaltyDuration" : "30 sec",
+            "position" : {
+              "x" : 624.0,
+              "y" : 328.0
+            },
+            "properties" : {
+              "argumentsStrategy" : "Command Arguments Property",
+              "Max Attribute Length" : "256",
+              "Command Path" : "aws",
+              "Argument Delimiter" : " ",
+              "Ignore STDIN" : "false",
+              "Command Arguments" : "emr terminate-clusters --cluster-ids ${emr_jobflow_id}"
+            },
+            "propertyDescriptors" : {
+              "argumentsStrategy" : {
+                "displayName" : "Command Arguments Strategy",
+                "identifiesControllerService" : false,
+                "name" : "argumentsStrategy",
+                "sensitive" : false
+              },
+              "Max Attribute Length" : {
+                "displayName" : "Max Attribute Length",
+                "identifiesControllerService" : false,
+                "name" : "Max Attribute Length",
+                "sensitive" : false
+              },
+              "Command Path" : {
+                "displayName" : "Command Path",
+                "identifiesControllerService" : false,
+                "name" : "Command Path",
+                "sensitive" : false
+              },
+              "Working Directory" : {
+                "displayName" : "Working Directory",
+                "identifiesControllerService" : false,
+                "name" : "Working Directory",
+                "sensitive" : false
+              },
+              "Output Destination Attribute" : {
+                "displayName" : "Output Destination Attribute",
+                "identifiesControllerService" : false,
+                "name" : "Output Destination Attribute",
+                "sensitive" : false
+              },
+              "Argument Delimiter" : {
+                "displayName" : "Argument Delimiter",
+                "identifiesControllerService" : false,
+                "name" : "Argument Delimiter",
+                "sensitive" : false
+              },
+              "Ignore STDIN" : {
+                "displayName" : "Ignore STDIN",
+                "identifiesControllerService" : false,
+                "name" : "Ignore STDIN",
+                "sensitive" : false
+              },
+              "Command Arguments" : {
+                "displayName" : "Command Arguments",
+                "identifiesControllerService" : false,
+                "name" : "Command Arguments",
+                "sensitive" : false
+              }
+            },
+            "runDurationMillis" : 0,
+            "scheduledState" : "ENABLED",
+            "schedulingPeriod" : "0 sec",
+            "schedulingStrategy" : "TIMER_DRIVEN",
+            "style" : { },
+            "type" : "org.apache.nifi.processors.standard.ExecuteStreamCommand",
+            "yieldDuration" : "1 sec"
+          }, {
+            "autoTerminatedRelationships" : [ "original", "nonzero status" ],
+            "bulletinLevel" : "WARN",
+            "bundle" : {
+              "artifact" : "nifi-standard-nar",
+              "group" : "org.apache.nifi",
+              "version" : "1.16.0"
+            },
+            "comments" : "",
+            "componentType" : "PROCESSOR",
+            "concurrentlySchedulableTaskCount" : 1,
+            "executionNode" : "ALL",
+            "groupIdentifier" : "9a1d7496-8fe6-3528-aa2b-ddff9d7d688e",
+            "identifier" : "50512c8b-58f5-38a0-b23e-2395b0dbb98c",
+            "name" : "CheckEMRStatus",
+            "penaltyDuration" : "30 sec",
+            "position" : {
+              "x" : 624.0,
+              "y" : 528.0
+            },
+            "properties" : {
+              "argumentsStrategy" : "Command Arguments Property",
+              "Max Attribute Length" : "256",
+              "Command Path" : "aws",
+              "Argument Delimiter" : " ",
+              "Ignore STDIN" : "false",
+              "Command Arguments" : "emr describe-cluster --cluster-id ${emr_jobflow_id}"
+            },
+            "propertyDescriptors" : {
+              "argumentsStrategy" : {
+                "displayName" : "Command Arguments Strategy",
+                "identifiesControllerService" : false,
+                "name" : "argumentsStrategy",
+                "sensitive" : false
+              },
+              "Max Attribute Length" : {
+                "displayName" : "Max Attribute Length",
+                "identifiesControllerService" : false,
+                "name" : "Max Attribute Length",
+                "sensitive" : false
+              },
+              "Command Path" : {
+                "displayName" : "Command Path",
+                "identifiesControllerService" : false,
+                "name" : "Command Path",
+                "sensitive" : false
+              },
+              "Working Directory" : {
+                "displayName" : "Working Directory",
+                "identifiesControllerService" : false,
+                "name" : "Working Directory",
+                "sensitive" : false
+              },
+              "Output Destination Attribute" : {
+                "displayName" : "Output Destination Attribute",
+                "identifiesControllerService" : false,
+                "name" : "Output Destination Attribute",
+                "sensitive" : false
+              },
+              "Argument Delimiter" : {
+                "displayName" : "Argument Delimiter",
+                "identifiesControllerService" : false,
+                "name" : "Argument Delimiter",
+                "sensitive" : false
+              },
+              "Ignore STDIN" : {
+                "displayName" : "Ignore STDIN",
+                "identifiesControllerService" : false,
+                "name" : "Ignore STDIN",
+                "sensitive" : false
+              },
+              "Command Arguments" : {
+                "displayName" : "Command Arguments",
+                "identifiesControllerService" : false,
+                "name" : "Command Arguments",
+                "sensitive" : false
+              }
+            },
+            "runDurationMillis" : 0,
+            "scheduledState" : "ENABLED",
+            "schedulingPeriod" : "0 sec",
+            "schedulingStrategy" : "TIMER_DRIVEN",
+            "style" : { },
+            "type" : "org.apache.nifi.processors.standard.ExecuteStreamCommand",
+            "yieldDuration" : "1 sec"
+          } ],
+          "remoteProcessGroups" : [ ],
+          "variables" : { }
+        } ],
+        "processors" : [ ],
+        "remoteProcessGroups" : [ ],
+        "variables" : { }
+      },
+      "flowEncodingVersion" : "1.0",
+      "parameterContexts" : { }
+    }
+  }
+}
